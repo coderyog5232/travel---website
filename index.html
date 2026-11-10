@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelX - Explore The World</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <h2 class="logo">
+                <i class="fa-solid fa-plane"></i> TravelX
+            </h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="login-btn" onclick="showLogin()">
+                Login
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Explore The World<br>
+                <span>With TravelX</span>
+            </h1>
+
+            <p>
+                Discover beautiful destinations and create
+                unforgettable memories.
+            </p>
+
+            <a href="#destinations" class="explore-btn">
+                Explore Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Search Section -->
+
+    <section class="search-section">
+
+        <h2>Find Your Perfect Trip</h2>
+
+        <div class="search-box">
+
+            <div class="input-group">
+                <label>Destination</label>
+                <input type="text" id="searchInput"
+                placeholder="Where do you want to go?">
+            </div>
+
+            <div class="input-group">
+                <label>Check In</label>
+                <input type="date" id="checkin">
+            </div>
+
+            <div class="input-group">
+                <label>Check Out</label>
+                <input type="date" id="checkout">
+            </div>
+
+            <div class="input-group">
+                <label>Travellers</label>
+                <select id="travellers">
+                    <option value="1">1 Person</option>
+                    <option value="2">2 Persons</option>
+                    <option value="3">3 Persons</option>
+                    <option value="4">4 Persons</option>
+                    <option value="5">5 Persons</option>
+                </select>
+            </div>
+
+            <button onclick="searchDestination()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Destinations -->
+
+    <section class="destinations" id="destinations">
+
+        <div class="section-title">
+
+            <h2>Popular Destinations</h2>
+
+            <p>Explore the most beautiful places around the world.</p>
+
+        </div>
+
+        <div class="destination-container" id="destinationContainer">
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section class="about" id="about">
+
+        <h2>Why Choose TravelX?</h2>
+
+        <div class="about-container">
+
+            <div class="about-card">
+                <i class="fa-solid fa-earth-americas"></i>
+                <h3>Best Destinations</h3>
+                <p>Discover amazing destinations around the world.</p>
+            </div>
+
+            <div class="about-card">
+                <i class="fa-solid fa-wallet"></i>
+                <h3>Affordable Prices</h3>
+                <p>Enjoy your holidays with budget-friendly packages.</p>
+            </div>
+
+            <div class="about-card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>We are always available to help you.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Booking Modal -->
+
+    <div class="modal" id="bookingModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2>Book Your Trip</h2>
+
+            <div id="bookingDetails"></div>
+
+            <form id="bookingForm">
+
+                <input type="text" id="customerName"
+                placeholder="Enter Your Name" required>
+
+                <input type="email" id="customerEmail"
+                placeholder="Enter Your Email" required>
+
+                <button type="submit">Confirm Booking</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer id="contact">
+
+        <h2>TravelX</h2>
+
+        <p>Explore the world. Experience life.</p>
+
+        <p>© 2026 TravelX. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
